@@ -9,17 +9,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    //IBO
+    //要變化的物件
     @IBOutlet weak var hair: UIImageView!
     @IBOutlet weak var face: UIImageView!
     @IBOutlet weak var glasses: UIImageView!
     @IBOutlet weak var body: UIImageView!
     @IBOutlet weak var background: UIImageView!
     
+    //選項的view
     @IBOutlet weak var hairView: UIView!
     @IBOutlet weak var faceView: UIView!
     @IBOutlet weak var glassesView: UIView!
     @IBOutlet weak var bodyView: UIView!
     @IBOutlet weak var backgroundView: UIView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +33,9 @@ class ViewController: UIViewController {
         bodyView.isHidden = true
         backgroundView.isHidden = true
     }
-
+    
+    
+    //button
     @IBAction func changeHair(_ sender: UIButton) {
         let hairImage = sender.currentImage
         hair.image = hairImage
@@ -60,6 +66,7 @@ class ViewController: UIViewController {
     }
 
     
+    //分類選項
     @IBAction func selectHair(_ sender: UIButton) {
         hairView.isHidden = false
         faceView.isHidden = true
@@ -98,6 +105,7 @@ class ViewController: UIViewController {
         backgroundView.isHidden = false
     }
     
+    //隨機
     @IBAction func selectRandom(_ sender: UIButton) {
         let hairs : [UIImage?] = [UIImage(named: "Afro"),UIImage(named: "Bangs"),UIImage(named: "Bangs 2"),UIImage(named: "Bantu Knots"),UIImage(named: "Bun"),UIImage(named: "Bun 2"),UIImage(named: "Buns"),UIImage(named: "Cornrows"),UIImage(named: "Cornrows 2"),UIImage(named: "hat-beanie"),UIImage(named: "Long"),UIImage(named: "Hijab")]
         
